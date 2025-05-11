@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Letter</title>
+  <style>
+    body {
+      background-color: #f5f5dc; /* light brown/beige */
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    #letter {
+      display: none;
+      opacity: 0;
+      background: #ffffff; /* white */
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s forwards;
+    }
+
+    h1 {
+      color: #8b4513; /* saddle brown */
+    }
+
+    p {
+      font-size: 18px;
+      color: #5c4033; /* dark brown */
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #a0522d; /* sienna brown */
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #8b4513; /* darker brown */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showLetter()">Click Me</button>
+
+  <div id="letter">
+    <h1>Hi My Love</h1>
+    <p>
+      Just wanted to say how much you mean to me.<br>
+      Every moment with you is like a dream come true.<br>
+      I may not be a poet, but my heart writes your name with every beat.<br><br>
+      Forever yours,<br>
+      
+    </p>
+    <button onclick="openLoveSite()">Listen to This</button>
+  </div>
+
+  <script>
+    function showLetter() {
+      const letter = document.getElementById("letter");
+      letter.style.display = "block";
+    }
+
+    function openLoveSite() {
+      window.open("https://www.youtube.com/watch?v=dP9gEHv0of4", "_blank");
+    }
+  </script>
+</body>
+</html>
